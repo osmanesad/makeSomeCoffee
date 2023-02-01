@@ -16,12 +16,29 @@ struct Home: View {
     var body: some View {
         
         if let info = quizInfo {
-            Text(info.title)
+            VStack(spacing: 10){
+                Text(info.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .halign(.leading)
+                
+                CustomLabel("list.bullet.rectangle.potrait", "\(questions.count)", "Çoktan seçmeli sorular.")
+                    .padding(.top, 20)
+                CustomLabel("person", "\(info.peopleAttended)", "Sorulara katıldı.")
+                    .padding(.top, 5)
+                
+                Divider()
+                    .padding(.horizontal, -15)
+                    .padding(.top, 15)
+            }
+            .padding(15)
+            .valign(.top)
+            
         } else {
             VStack(spacing: 4){
                 ProgressView()
                 Text("Lütfen Bekleyin...")
-                    .font(.caption2)
+                    .font(.caption)
                     .foregroundColor(.gray)
             }
             .task {
@@ -34,6 +51,37 @@ struct Home: View {
         }
         
     }
+    
+    @ViewBuilder
+    func CustomLabel(_ image: String, _ title: String, _ subTitle: String) -> some View {
+        HStack(spacing: 12){
+            Image(systemName: image)
+                .font(.title3)
+                .frame(width: 45, height: 45)
+                .background{
+                    Circle()
+                        .fill(.gray.opacity(0.1))
+                        .padding(-1)
+                        .background{
+                            Circle()
+                                .stroke(Color.green, lineWidth: 1)
+                        }
+                }
+            
+            VStack(alignment: .leading, spacing: 4){
+                Text(title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.black)
+                Text(subTitle)
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundColor(.gray)
+            }
+            .halign(.leading)
+        }
+    }
+    
+    
     // Hatırlatma: Firebase veritabanı "Rules" ayarlarında veritabanına erişim kısımını şu şekilde değiştirin "allow read, write: if request.auth !=null;" veya "...if true;"
     func fetchData()async throws{
         try await loginUserAnonymous()
@@ -58,5 +106,17 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+extension View{
+    func halign(_ alignment: Alignment) -> some View {
+        self
+            .frame(maxWidth: .infinity, alignment: alignment)
+    }
+    
+    func valign(_ alignment: Alignment) -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: alignment)
     }
 }
