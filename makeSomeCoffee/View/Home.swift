@@ -30,6 +30,11 @@ struct Home: View {
                 Divider()
                     .padding(.horizontal, -15)
                     .padding(.top, 15)
+                
+                if !info.rules.isEmpty {
+                    RulesView(info.rules)
+                    
+                }
             }
             .padding(15)
             .valign(.top)
@@ -50,6 +55,28 @@ struct Home: View {
             }
         }
         
+    }
+    
+    @ViewBuilder
+    func RulesView(_ rules: [String])->some View {
+        VStack(alignment: .leading, spacing: 15){
+            Text("Başlamadan önce açıklamaları okuyun.")
+                .font(.title3)
+                .fontWeight(.bold)
+            
+            ForEach(rules, id: \.self){rule in
+                HStack(alignment: .top, spacing: 10){
+                    Circle()
+                        .fill(.black)
+                        .frame(width: 8, height: 8)
+                    Text(rule)
+                        .font(.callout)
+                        .lineLimit(3)
+                    
+                }
+                
+            }
+        }
     }
     
     @ViewBuilder
@@ -80,7 +107,6 @@ struct Home: View {
             .halign(.leading)
         }
     }
-    
     
     // Hatırlatma: Firebase veritabanı "Rules" ayarlarında veritabanına erişim kısımını şu şekilde değiştirin "allow read, write: if request.auth !=null;" veya "...if true;"
     func fetchData()async throws{
