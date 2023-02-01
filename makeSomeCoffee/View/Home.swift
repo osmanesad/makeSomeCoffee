@@ -21,10 +21,13 @@ struct Home: View {
                     .font(.title)
                     .fontWeight(.semibold)
                     .halign(.leading)
-                
-                CustomLabel("list.bullet.rectangle.potrait", "\(questions.count)", "Çoktan seçmeli sorular.")
+                Text("V60 ile Kahve Demleme")
+                    .font(.title3)
+                    .fontWeight(.medium)
+                    .halign(.leading)
+                CustomLabel("list.bullet.rectangle.potrait", "\(questions.count)", "Toplam aşama sayısı.")
                     .padding(.top, 20)
-                CustomLabel("person", "\(info.peopleAttended)", "Sorulara katıldı.")
+                CustomLabel("person", "\(info.peopleAttended)", "Kişi katılım gösterdi.")
                     .padding(.top, 5)
                 
                 Divider()
@@ -35,6 +38,26 @@ struct Home: View {
                     RulesView(info.rules)
                     
                 }
+                
+                Button {
+                    
+                } label: {
+                    Text("Başla")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .halign(.center)
+                        .padding(.top, 15)
+                        .padding(.bottom, 10)
+                        .foregroundColor(.white)
+                        .background{
+                            Rectangle()
+                                .fill(Color.black)
+                                .ignoresSafeArea()
+                        }
+                }
+                .cornerRadius(16)
+                //.padding([.bottom,.horizontal],-15)
+                .valign(.bottom)
             }
             .padding(15)
             .valign(.top)
@@ -69,6 +92,7 @@ struct Home: View {
                     Circle()
                         .fill(.black)
                         .frame(width: 8, height: 8)
+                        .offset(y: 6)
                     Text(rule)
                         .font(.callout)
                         .lineLimit(3)
