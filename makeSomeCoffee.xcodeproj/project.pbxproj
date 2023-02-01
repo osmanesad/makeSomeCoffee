@@ -10,11 +10,11 @@
 		23037A05298ACA2400066422 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A04298ACA2400066422 /* Home.swift */; };
 		23037A07298ACA4500066422 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A06298ACA4500066422 /* Info.swift */; };
 		23037A09298ACBF100066422 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A08298ACBF100066422 /* Question.swift */; };
+		23037A0B298AD8B400066422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23037A0A298AD8B400066422 /* GoogleService-Info.plist */; };
 		232E32112976E8F1000B07C9 /* makeSomeCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E32102976E8F1000B07C9 /* makeSomeCoffeeApp.swift */; };
 		232E32132976E8F1000B07C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E32122976E8F1000B07C9 /* ContentView.swift */; };
 		232E32152976E8F4000B07C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232E32142976E8F4000B07C9 /* Assets.xcassets */; };
 		232E32182976E8F4000B07C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232E32172976E8F4000B07C9 /* Preview Assets.xcassets */; };
-		232E321F2976EB87000B07C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232E321E2976EB87000B07C9 /* GoogleService-Info.plist */; };
 		23659A592989C44000E610BC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A582989C44000E610BC /* FirebaseAuth */; };
 		23659A5B2989C44000E610BC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A5A2989C44000E610BC /* FirebaseFirestore */; };
 		23659A5D2989C44000E610BC /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A5C2989C44000E610BC /* FirebaseFirestoreSwift */; };
@@ -24,12 +24,12 @@
 		23037A04298ACA2400066422 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		23037A06298ACA4500066422 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		23037A08298ACBF100066422 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		23037A0A298AD8B400066422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		232E320D2976E8F1000B07C9 /* makeSomeCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeSomeCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232E32102976E8F1000B07C9 /* makeSomeCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeSomeCoffeeApp.swift; sourceTree = "<group>"; };
 		232E32122976E8F1000B07C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		232E32142976E8F4000B07C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		232E32172976E8F4000B07C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		232E321E2976EB87000B07C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		232E32202976EBD8000B07C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +88,7 @@
 				232E32202976EBD8000B07C9 /* Info.plist */,
 				232E32102976E8F1000B07C9 /* makeSomeCoffeeApp.swift */,
 				232E32122976E8F1000B07C9 /* ContentView.swift */,
-				232E321E2976EB87000B07C9 /* GoogleService-Info.plist */,
+				23037A0A298AD8B400066422 /* GoogleService-Info.plist */,
 				232E32142976E8F4000B07C9 /* Assets.xcassets */,
 				232E32162976E8F4000B07C9 /* Preview Content */,
 			);
@@ -171,7 +171,7 @@
 			files = (
 				232E32182976E8F4000B07C9 /* Preview Assets.xcassets in Resources */,
 				232E32152976E8F4000B07C9 /* Assets.xcassets in Resources */,
-				232E321F2976EB87000B07C9 /* GoogleService-Info.plist in Resources */,
+				23037A0B298AD8B400066422 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

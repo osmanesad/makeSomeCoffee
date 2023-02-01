@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>197102769669-fcdggol0ufqi0ihjd5p2sgms5b89jqck.apps.googleusercontent.com</string>
+	<string>197102769669-0rm39gr54i2mp5v19gegfoqqrh8kr8p0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.197102769669-fcdggol0ufqi0ihjd5p2sgms5b89jqck</string>
+	<string>com.googleusercontent.apps.197102769669-0rm39gr54i2mp5v19gegfoqqrh8kr8p0</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>197102769669-fas325cd1t3n0hp0upb6rveg5n34b1sa.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>pixeldigitalart.co.makeSomeCoffee</string>
+	<string>com.mycompany.coffeelib</string>
 	<key>PROJECT_ID</key>
 	<string>coffeelib-4f661</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:197102769669:ios:ec360a49b4b40fa0cb6e6c</string>
+	<string>1:197102769669:ios:21a5c196704139f0cb6e6c</string>
 </dict>
 </plist>
