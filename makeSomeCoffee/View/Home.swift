@@ -34,7 +34,7 @@ struct Home: View {
         }
         
     }
-    // Hatırlatma: Firebase veritabanı "Rules" ayarlarında veritabanına erişim kısımını şu şekilde değiştirin "allow read, write: if request.auth !=null;"
+    // Hatırlatma: Firebase veritabanı "Rules" ayarlarında veritabanına erişim kısımını şu şekilde değiştirin "allow read, write: if request.auth !=null;" veya "...if true;"
     func fetchData()async throws{
         try await loginUserAnonymous()
         let info = try await Firestore.firestore().collection("Quiz").document("Info").getDocument().data(as: Info.self)
