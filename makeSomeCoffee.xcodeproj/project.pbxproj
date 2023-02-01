@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23037A05298ACA2400066422 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A04298ACA2400066422 /* Home.swift */; };
 		23037A07298ACA4500066422 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A06298ACA4500066422 /* Info.swift */; };
+		23037A09298ACBF100066422 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23037A08298ACBF100066422 /* Question.swift */; };
 		232E32112976E8F1000B07C9 /* makeSomeCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E32102976E8F1000B07C9 /* makeSomeCoffeeApp.swift */; };
 		232E32132976E8F1000B07C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232E32122976E8F1000B07C9 /* ContentView.swift */; };
 		232E32152976E8F4000B07C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232E32142976E8F4000B07C9 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		23037A04298ACA2400066422 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		23037A06298ACA4500066422 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		23037A08298ACBF100066422 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		232E320D2976E8F1000B07C9 /* makeSomeCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeSomeCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232E32102976E8F1000B07C9 /* makeSomeCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeSomeCoffeeApp.swift; sourceTree = "<group>"; };
 		232E32122976E8F1000B07C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				23037A06298ACA4500066422 /* Info.swift */,
+				23037A08298ACBF100066422 /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23037A09298ACBF100066422 /* Question.swift in Sources */,
 				232E32132976E8F1000B07C9 /* ContentView.swift in Sources */,
 				23037A07298ACA4500066422 /* Info.swift in Sources */,
 				23037A05298ACA2400066422 /* Home.swift in Sources */,
