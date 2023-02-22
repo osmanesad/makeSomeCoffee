@@ -12,8 +12,9 @@ struct QuestionsView: View {
     var questions: [Question]
     @Environment(\.dismiss) private var dismiss
     var body: some View {
-        VStack{
+        VStack(spacing: 15){
             Button {
+                dismiss()
                 
             } label: {
                 Image(systemName: "xmark")
@@ -22,6 +23,11 @@ struct QuestionsView: View {
                     .foregroundColor(.white)
             }
             .halign(.leading)
+            
+            Text(info.title)
+                .font(.title)
+                .fontWeight(.semibold)
+                .halign(.leading)
         }
         .padding(15)
         .halign(.center).valign(.top)
