@@ -11,6 +11,7 @@ struct QuestionsView: View {
     var info: Info
     var questions: [Question]
     @Environment(\.dismiss) private var dismiss
+    @State private var progress: CGFloat = 0
     var body: some View {
         VStack(spacing: 15){
             Button {
@@ -28,6 +29,19 @@ struct QuestionsView: View {
                 .font(.title)
                 .fontWeight(.semibold)
                 .halign(.leading)
+            GeometryReader {
+                let size = $0.size
+                ZStack(alignment: .leading) {
+                    Rectangle()
+                        .fill(.black.opacity(0.2))
+                    Rectangle()
+                        .fill(Color(.purple))
+                        .frame(width: progress * size.width, alignment: .leading)
+                    
+                }
+            }
+            .frame(height: 20)
+            .padding(.top, 5)
         }
         .padding(15)
         .halign(.center).valign(.top)
