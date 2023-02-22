@@ -13,6 +13,8 @@ struct Home: View {
     @State private var quizInfo: Info?
     @AppStorage("log_status") private var logStatus: Bool = false
     @State private var questions: [Question] = []
+    @State private var startQuiz: Bool = false
+    
     var body: some View {
         
         if let info = quizInfo {
@@ -40,7 +42,7 @@ struct Home: View {
                 }
                 
                 Button {
-                    
+                    startQuiz.toggle()
                 } label: {
                     Text("Başla")
                         .font(.title3)
@@ -61,6 +63,9 @@ struct Home: View {
             }
             .padding(15)
             .valign(.top)
+            .fullScreenCover(isPresented: $startQuiz) {
+                QuestionsView(info: info, questions: questions)
+            }
             
         } else {
             VStack(spacing: 4){

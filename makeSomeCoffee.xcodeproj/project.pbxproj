@@ -18,6 +18,7 @@
 		23659A592989C44000E610BC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A582989C44000E610BC /* FirebaseAuth */; };
 		23659A5B2989C44000E610BC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A5A2989C44000E610BC /* FirebaseFirestore */; };
 		23659A5D2989C44000E610BC /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23659A5C2989C44000E610BC /* FirebaseFirestoreSwift */; };
+		23D01A5F29A678DB00A23346 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D01A5E29A678DB00A23346 /* QuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		232E32142976E8F4000B07C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		232E32172976E8F4000B07C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		232E32202976EBD8000B07C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		23D01A5E29A678DB00A23346 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				23037A04298ACA2400066422 /* Home.swift */,
+				23D01A5E29A678DB00A23346 /* QuestionsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				23037A09298ACBF100066422 /* Question.swift in Sources */,
 				232E32132976E8F1000B07C9 /* ContentView.swift in Sources */,
+				23D01A5F29A678DB00A23346 /* QuestionsView.swift in Sources */,
 				23037A07298ACA4500066422 /* Info.swift in Sources */,
 				23037A05298ACA2400066422 /* Home.swift in Sources */,
 				232E32112976E8F1000B07C9 /* makeSomeCoffeeApp.swift in Sources */,
