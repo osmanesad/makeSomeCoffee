@@ -40,25 +40,9 @@ struct Home: View {
                     RulesView(info.rules)
                     
                 }
-                
-                Button {
+                CustomButton(title: "Başla", onClick: {
                     startQuiz.toggle()
-                } label: {
-                    Text("Başla")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .halign(.center)
-                        .padding(.top, 15)
-                        .padding(.bottom, 10)
-                        .foregroundColor(.white)
-                        .background{
-                            Rectangle()
-                                .fill(Color.black)
-                                .ignoresSafeArea()
-                        }
-                }
-                .cornerRadius(16)
-                //.padding([.bottom,.horizontal],-15)
+                })
                 .valign(.bottom)
             }
             .padding(15)
@@ -161,6 +145,34 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+    }
+}
+
+
+struct CustomButton: View {
+    var title: String
+    var onClick: ()->()
+    
+    var body: some View{
+        Button {
+            onClick()
+        } label: {
+            Text(title)
+                .font(.title3)
+                .fontWeight(.semibold)
+                .halign(.center)
+                .padding(.top, 15)
+                .padding(.bottom, 10)
+                .foregroundColor(.white)
+                .background{
+                    Rectangle()
+                        .fill(Color.black)
+                        .ignoresSafeArea()
+                }
+        }
+        .cornerRadius(16)
+        //.padding([.bottom,.horizontal],-15)
+
     }
 }
 

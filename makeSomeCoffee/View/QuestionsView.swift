@@ -12,6 +12,7 @@ struct QuestionsView: View {
     var questions: [Question]
     @Environment(\.dismiss) private var dismiss
     @State private var progress: CGFloat = 0
+    @State private var currentIndex: Int = 0
     var body: some View {
         VStack(spacing: 15){
             Button {
@@ -39,9 +40,27 @@ struct QuestionsView: View {
                         .frame(width: progress * size.width, alignment: .leading)
                     
                 }
+                .clipShape(Capsule())
             }
             .frame(height: 20)
             .padding(.top, 5)
+            
+            // Questions
+            
+            GeometryReader{
+                let size = $0.size
+                ForEach(questions.indices, id: \.self){ index in
+                    if currentIndex == index {
+                        QuestionView(questions[currentIndex])
+                            .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                    }
+                }
+            }
+            .padding(.vertical, 15)
+            
+            CustomButton(title: "Sıradaki Aşama") {
+                
+            }
         }
         .padding(15)
         .halign(.center).valign(.top)
@@ -50,6 +69,14 @@ struct QuestionsView: View {
                 .ignoresSafeArea()
         }
         .environment(\.colorScheme, .dark)
+    }
+    
+    // Question View
+    
+    @ViewBuilder
+    func QuestionView(_ question: Question)-> some View {
+        RoundedRectangle(cornerRadius: 20, style: .continuous)
+            .fill(.white)
     }
 }
 
